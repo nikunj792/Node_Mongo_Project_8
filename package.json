@@ -1,0 +1,20 @@
+{
+  "name": "node_mongo_project_8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "set NODE_ENV=test && mocha"
+  },
+  "author": "Nikunj",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "mocha": "^5.2.0",
+    "mongoose": "^5.2.5",
+    "nodemon": "^1.18.3",
+    "supertest": "^3.1.0"
+  }
+}
