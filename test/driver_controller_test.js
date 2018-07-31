@@ -58,4 +58,26 @@ describe('Driver Controller',()=>{
         });
         done();
     });
+
+    it('Get to /api/drivers in a location',(done)=>{
+        const driver1 = new Driver({
+            email: 'test1@gmail.com',
+            geometry:{type: 'Point', coordinate: [-122, 47]}
+        });
+        const driver2 = new Driver({
+            email: 'test2@gmail.com',
+            geometry:{type: 'Point', coordinate: [-80, 25]}
+        });
+
+        Promise.all([driver1, driver2])
+        .then(driver=>{
+            request(app)
+                .get('/api/drivers?lng=-80&lat=25')
+                .end((err, response)=>{
+                    console.log('sdasdassa', response);
+                    done();
+                })
+        });
+        done();
+    })
 });
